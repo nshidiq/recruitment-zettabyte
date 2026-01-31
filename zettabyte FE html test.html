@@ -1,0 +1,267 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Simple Pricing</title>
+
+    <style>
+      * {
+        box-sizing:border-box;
+        font-family: "segoe UI", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      body{
+        background: #f4f6f8;
+        color:white;
+        text-align: center;
+        padding: 80px 20px 160px;
+      }
+
+      .header{
+        background: #192c49;
+        color: white;
+        text-align: center;
+        padding: 80px 20px 160px;
+      }
+
+      .header h1{
+        font-size: 42px;
+        margin-bottom: 15px;
+      }
+
+      .header p{
+        font-size: 14px;
+        max-width: 600px;
+        margin: auto;
+        line-height: 1.6;
+        color: #d1d5db;
+      }
+      
+      .pricing-section{
+        max-width: 1100px;
+        margin: -120px auto 60px;
+        padding: 0 20px;
+      }
+
+      .pricing-cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(260px, 1fr));
+        gap: 25px;
+      }
+
+      .card{
+        background: white;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0,0,0,0,12);
+        text-align: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .card:hover{
+        transform: scale(1.08);
+        box-shadow: 0 15px 20px rgba(0,0,0,0,25);
+      }
+
+      .card.selected{
+        border: 3px solid #1d4ed8;
+        transform: scale(1.1);
+      }
+
+      .card-header{
+        background: #3c4252;
+        color: white;
+        padding: 12px;
+        font-weight: bold;
+        font-size: 14px;
+        position: relative;
+      }
+
+      .badge{
+        position: absolute;
+        right:10px;
+        top: 8px;
+        background: #22c55e;
+        color: white;
+        font-size: 10px;
+        padding: 3px 6px;
+        border-radius: 3px;
+      }
+
+      .card-body{
+        padding: 30px 20px;
+      }
+
+      .price{
+        font-size: 48px;
+        color:#111827;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .price span{
+        font-size: 14px;
+        color: #6b7280;
+      }
+
+      .features{
+        margin: 25px 0;
+        list-style: none;
+        font-size: 14px;
+        color: #4b5563;
+      }
+
+      .features li{
+        margin: 6px 0;
+      }
+
+      .btn{
+        background: #0ea5e9;
+        color: white;
+        border: none;
+        padding: 10px 22px;
+        border-radius: 4px;
+        font-size: 13px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .btn:hover{
+        background: #0284c7;
+      }
+
+      .faq{
+        background: white;
+        max-width: 1100px;
+        margin: auto;
+        padding: 60px 30px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0,08);
+      }
+
+      .faq h2{
+        text-align: center;
+        color: #111827;
+        margin-bottom: 40px;
+        font-size: 26px;
+      }
+
+      .faq-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+        gap: 40px;
+      }
+
+      .faq-item h4{
+        margin-bottom: 10px;
+        color: #111827;
+      }
+
+      .faq-item p{
+        font-size: 14px;
+        color: #6b7280;
+        line-height: 1.6;
+      }
+    </style>
+    </head>
+
+    <body>
+      <section class="header">
+        <h1>Simple Pricing</h1>
+        <p>
+          The most advanced customer support tools with a simple and affordable pricing 
+          And you can always try for 30 days, free!
+        </p>  
+
+      </section>
+
+      <section class="pricing-section">
+        <div class="pricing-cards">
+          <div class="card" data-plan="basic">
+            <div class="card-header">
+              BASIC
+            </div>
+            <div class="card-body">
+              <div class="price">
+                $4<span>/month</span>
+              </div>
+
+              <ul class="features">
+                <li>10 projects</li>
+                <li>10 pages</li>
+                <li>100 MB Disk Space</li>
+              </ul>
+
+              <button class="btn">BUY NOW</button>
+            </div>
+          </div>
+
+          <div class="card" data-plan="Standard">
+            <div class="card-header">
+              STANDARD
+              <span class="badge">save 15 %</span>
+            </div>
+            <div class="card-body">
+            <div class="price">
+              $8<span>/ month</span>
+            </div>
+
+            <ul class="features">
+              <li>20 projects</li>
+              <li>20 pages</li>
+              <li>200 MB Disk Space</li>
+            </ul>
+
+              <button class="btn">BUY NOW</button>
+            </div>
+          </div>
+
+          <div class="card" data-plan="Advanced">
+            <div class="card-header">
+              ADVANCED
+            </div>
+            <div class="card-body">
+            <div class="price">
+              $12<span>/ month</span>
+            </div>
+
+            <ul class="features">
+              <li>40 projects</li>
+              <li>40 pages</li>
+              <li>500 MB Disk Space</li>
+            </ul>
+
+            <button class="btn">BUY NOW</button>
+          </div>
+          </div>
+
+        </div>
+      
+      </section>
+
+      <section class="faq">
+        <h2>Frequently Asked Question</h2>
+
+          <div class="faq-grid">
+            <div class="faq-item">
+              <h4>How does free trial work?</h4>
+              <p>Lorem ipsum dolor sit amet, consecteur adisipcing elit. curibatur</p>
+            </div>
+
+            <div class="faq-item">
+              <h4>Can i cancel any time?</h4>
+              <p>Lorem ipsum dolor sit amet, consecteur adisipcing elit. curibatur</p>
+            </div>
+
+          </div>
+
+          
+
+      </section>
+
+  
+    </body>
+</html>
